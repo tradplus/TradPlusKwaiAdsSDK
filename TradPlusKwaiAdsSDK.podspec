@@ -1,7 +1,7 @@
 
   Pod::Spec.new do |s|
   s.name             = 'TradPlusKwaiAdsSDK'
-  s.version          = '1.0.1'
+  s.version          = '1.0.6'
   s.summary          = 'TradPlusKwaiAdsSDK'
   s.description      = <<-DESC
       TradPlusKwaiAdsSDK,TradPlusKwaiAdsSDK

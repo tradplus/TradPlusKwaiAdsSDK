@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly) NSString *adTrackId;
 /// 当前广告 tag id
 @property (nonatomic, copy, readonly) NSString *adTagId;
-/// 当前广告的价格
+/// 当前广告的价格，cpm
 @property (nonatomic, copy, readonly) NSString *price;
 
 - (instancetype)init NS_UNAVAILABLE;
