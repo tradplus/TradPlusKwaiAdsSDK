@@ -11,6 +11,17 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSInteger, KCOMediationType) {
+    /** 单独接入联盟SDK */
+    KCOMediationTypeSDK = 0,
+    /** Max Adapter方式接入 */
+    KCOMediationTypeMaxAdapter = 1,
+    /** TopOn方式接入 */
+    KCOMediationTypeMaxTopOn = 2,
+    /** TradPlus方式接入 */
+    KCOMediationTypeMaxTradPlus = 3
+};
+
 typedef void (^KCOAdsUInitializationCompletionHandler)(NSError * _Nullable error);
 
 /// SDK 初始化对象，用于构建 SDK 初始化参数
@@ -24,6 +35,10 @@ typedef void (^KCOAdsUInitializationCompletionHandler)(NSError * _Nullable error
 ///
 /// 请联系快手平台申请正式token【必填】
 @property (nonatomic, copy) NSString *token;
+/// 媒体接入类型
+///
+/// 请填写媒体接入类型，非必填
+@property (nonatomic, assign) KCOMediationType mediationType;
 /// App 名称
 ///
 /// 请填写您应用的名，非必填
