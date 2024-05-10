@@ -28,16 +28,23 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)generateWithAdTagId:(NSString *)tagId;
 
 - (instancetype)init NS_UNAVAILABLE;
+
 + (instancetype)new NS_UNAVAILABLE;
 
-/// Load ad
+/// Load ad, Initialize once, load multiple times
 - (void)loadAd;
-/// Show ad
+/// Show ad, [Must] in main thread
 - (void)showAdWithViewController:(UIViewController *)viewController;
 /// Kwai bid win
 - (void)bidWin;
 /// Kwai bid lose
 - (void)bidLose;
+
+///[optional] Set bid floor price
+- (void)setupBidFloorPrice:(CGFloat)floorPrice;
+
+///[optional] Currency specified using ISO-4217 alpha codes , default is USD
+- (void)setupBidFloorCur:(NSString *)currency;
 
 @end
 
